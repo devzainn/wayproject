@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+@source "../views";
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@keyframes waveMoveTop {
+    0% { d: path("M0 0H1512V500C1512 500 1392 470 1238.5 485C1055.77 500 985.979 530 806.5 550C629.535 570 485 510 308.5 510C165.559 510 0 600 0 600V0Z"); }
+    50% { d: path("M0 0H1512V510C1512 510 1392 480 1238.5 495C1055.77 510 985.979 540 806.5 560C629.535 580 485 520 308.5 520C165.559 520 0 610 0 600V0Z"); }
+    100% { d: path("M0 0H1512V500C1512 500 1392 470 1238.5 485C1055.77 500 985.979 530 806.5 550C629.535 570 485 510 308.5 510C165.559 510 0 600 0 600V0Z"); }
+}
+
+@keyframes waveMoveBottom {
+    0% { d: path("M0 0H1512V470C1512 470 1392 445 1238.5 460C1055.77 475 985.979 510 806.5 530C629.535 550 485 490 308.5 490C165.559 490 0 580 0 580V0Z"); }
+    50% { d: path("M0 0H1512V480C1512 480 1392 455 1238.5 470C1055.77 485 985.979 520 806.5 540C629.535 560 485 500 308.5 500C165.559 500 0 590 0 580V0Z"); }
+    100% { d: path("M0 0H1512V470C1512 470 1392 445 1238.5 460C1055.77 475 985.979 510 806.5 530C629.535 550 485 490 308.5 490C165.559 490 0 580 0 580V0Z"); }
+}
+
+.wave-path-top {
+    animation: waveMoveTop 6s infinite ease-in-out;
+}
+
+.wave-path-bottom {
+    animation: waveMoveBottom 6s infinite ease-in-out;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
